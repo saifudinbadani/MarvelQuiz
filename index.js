@@ -86,12 +86,14 @@ for (i=0; i < questionMajor.length; i++){
 console.log(chalk.keyword('orange')('Your final score is ') + chalk.bold.whiteBright(score))
 
 for (var i=0; i< highScore.length; i++){
- if (score < highScore[i].marks){
-  console.log("Good work!");
-  console.log('Highest score of 9 was previously achieved by ' + chalk.bold.blueBright(highScore[0].name))
- } else {
-  console.log(chalk.bgYellowBright("Congratulations! ") + chalk.bold.blueBright(userName) + chalk.bgYellowBright(". You have beaten the high score. Send Saifudin a screenshot of the score to get  your name etched in HALL OF FAME."))
- }
-} 
+  if (score >= highScore[i].marks){
+   console.log(chalk.bgYellowBright("Congratulations! ") + chalk.bold.blueBright(userName) + chalk.bgYellowBright(". You have beaten the high score. Send Saifudin a screenshot of the score to get  your name etched in HALL OF FAME."))
+   break;
+  } else {
+   console.log("Good work!");
+   console.log('Highest score of 9 was previously achieved by ' + chalk.bold.blueBright(highScore[0].name))
+   // break;
+  }
+ } 
 
 
