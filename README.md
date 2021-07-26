@@ -1,0 +1,1 @@
+This project is made on node.js and it uses 'CHALK' and 'readlinesync' package.
